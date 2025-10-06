@@ -619,57 +619,6 @@
             }
           },
           {
-            "shape": "flow",
-            "attrs": {
-              "line": {
-                "stroke": "#333333",
-                "targetMarker": {
-                  "name": "block"
-                },
-                "sourceMarker": {
-                  "name": ""
-                },
-                "strokeDasharray": null
-              }
-            },
-            "width": 200,
-            "height": 100,
-            "zIndex": 10,
-            "connector": "smooth",
-            "data": {
-              "type": "tm.Flow",
-              "name": "User Is Authenticated",
-              "description": "",
-              "outOfScope": false,
-              "isTrustBoundary": false,
-              "reasonOutOfScope": "",
-              "hasOpenThreats": false,
-              "isBidirectional": false,
-              "isEncrypted": false,
-              "isPublicNetwork": false,
-              "protocol": "",
-              "threats": []
-            },
-            "labels": [
-              "User Is Authenticated"
-            ],
-            "id": "f610cc47-65ab-4a9d-b424-f8c7e8dc7967",
-            "source": {
-              "cell": "b6b3f618-78e4-4bc2-b031-da740fd76fca",
-              "port": "28b4094c-836b-4b54-b055-ec7e291b0ebd"
-            },
-            "target": {
-              "cell": "6c4f5eeb-0765-4b92-abd5-37c228c2f7af",
-              "port": "6c297824-844a-47dd-87ad-1a0d32bd9735"
-            },
-            "vertices": [
-              {
-                "x": 440,
-                "y": 880
-              }
-            ]
-          },
-          {
             "shape": "trust-boundary-curve",
             "width": 200,
             "height": 100,
@@ -1214,6 +1163,57 @@
               {
                 "x": 290,
                 "y": 855
+              }
+            ]
+          },
+          {
+            "shape": "flow",
+            "attrs": {
+              "line": {
+                "stroke": "#333333",
+                "targetMarker": {
+                  "name": "block"
+                },
+                "sourceMarker": {
+                  "name": ""
+                },
+                "strokeDasharray": null
+              }
+            },
+            "width": 200,
+            "height": 100,
+            "zIndex": 10,
+            "connector": "smooth",
+            "data": {
+              "type": "tm.Flow",
+              "name": "User Is Authenticated",
+              "description": "",
+              "outOfScope": false,
+              "isTrustBoundary": false,
+              "reasonOutOfScope": "",
+              "hasOpenThreats": false,
+              "isBidirectional": false,
+              "isEncrypted": false,
+              "isPublicNetwork": false,
+              "protocol": "",
+              "threats": []
+            },
+            "labels": [
+              "User Is Authenticated"
+            ],
+            "id": "f610cc47-65ab-4a9d-b424-f8c7e8dc7967",
+            "source": {
+              "cell": "b6b3f618-78e4-4bc2-b031-da740fd76fca",
+              "port": "28b4094c-836b-4b54-b055-ec7e291b0ebd"
+            },
+            "target": {
+              "cell": "6c4f5eeb-0765-4b92-abd5-37c228c2f7af",
+              "port": "6c297824-844a-47dd-87ad-1a0d32bd9735"
+            },
+            "vertices": [
+              {
+                "x": 440,
+                "y": 880
               }
             ]
           }
