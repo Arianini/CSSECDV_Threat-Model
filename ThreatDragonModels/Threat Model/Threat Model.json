@@ -151,8 +151,8 @@
                 "text": "Web Application"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -249,12 +249,41 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "1b4a177f-46e9-420f-a77a-0f7c397002fe",
+                  "title": "Spoofing – Credential/Session Impersonation",
+                  "status": "Open",
+                  "severity": "High",
+                  "type": "Spoofing",
+                  "description": "Attacker uses stolen/replayed credentials or session to appear as a valid user during login",
+                  "mitigation": "TLS 1.2+, MFA, rate limit/lockout, secure cookies (HttpOnly/SameSite/Secure), rotate session ID after login, token replay protection",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 1,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 1,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 0
+              }
+            },
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove"
+              ],
+              "name": null
             }
           },
           {
@@ -271,8 +300,8 @@
                 "text": "Authorization Provider"
               },
               "body": {
-                "stroke": "#333333",
-                "strokeWidth": 1.5,
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "strokeDasharray": null
               }
             },
@@ -369,12 +398,34 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "handlesCardPayment": false,
               "handlesGoodsOrServices": false,
               "isWebApplication": false,
               "privilegeLevel": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "439df7e7-64c9-4aa4-ad74-99d98cb5a80e",
+                  "title": "Elevation of Privilege – Roles/Claims Abuse",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Elevation of privilege",
+                  "description": "Misconfigured roles/claims or token tampering lets a user obtain higher privileges",
+                  "mitigation": "Server-side RBAC/ABAC, signed & validated tokens, least-privileged service accounts, separate admin endpoints, audit & alerts on privilege changes",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 2,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "spoofing": 0,
+                "tampering": 0,
+                "repudiation": 0,
+                "informationDisclosure": 0,
+                "denialOfService": 0,
+                "elevationOfPrivilege": 1
+              }
             }
           },
           {
@@ -722,7 +773,8 @@
             "shape": "flow",
             "attrs": {
               "line": {
-                "stroke": "#333333",
+                "stroke": "red",
+                "strokeWidth": 2.5,
                 "targetMarker": {
                   "name": "block"
                 },
@@ -743,12 +795,31 @@
               "outOfScope": false,
               "isTrustBoundary": false,
               "reasonOutOfScope": "",
-              "hasOpenThreats": false,
+              "hasOpenThreats": true,
               "isBidirectional": false,
               "isEncrypted": false,
               "isPublicNetwork": false,
               "protocol": "",
-              "threats": []
+              "threats": [
+                {
+                  "id": "a973c69b-25c0-4715-8fb1-a01cb6bf90e2",
+                  "title": "Tampering – SQL Injection",
+                  "status": "Open",
+                  "severity": "Medium",
+                  "type": "Tampering",
+                  "description": "Untrusted feedback input is concatenated into SQL, allowing an attacker to alter queries and data",
+                  "mitigation": "Parameterized queries/ORM, input validation & encoding, least-privileged DB user (no DROP/ALTER), stored procedures/allow-lists, WAF rules, query linting",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 3,
+                  "score": ""
+                }
+              ],
+              "threatFrequency": {
+                "tampering": 1,
+                "informationDisclosure": 0,
+                "denialOfService": 0
+              }
             },
             "labels": [
               "Insert Query With Feedback Comments\n"
@@ -762,7 +833,12 @@
               "cell": "5619f007-1e0f-4a7a-a7fa-9a25a2577dd6",
               "port": "6a4cb8c6-cd03-4773-99a6-ea169ccc92a4"
             },
-            "vertices": []
+            "vertices": [
+              {
+                "x": 810,
+                "y": 880
+              }
+            ]
           },
           {
             "shape": "flow",
@@ -1222,6 +1298,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Ms. Kat",
-    "threatTop": 0
+    "threatTop": 3
   }
 }
