@@ -567,13 +567,6 @@
                 "spoofing": 0,
                 "repudiation": 1
               }
-            },
-            "tools": {
-              "items": [
-                "boundary",
-                "button-remove"
-              ],
-              "name": null
             }
           },
           {
@@ -1097,11 +1090,24 @@
                   "new": false,
                   "number": 4,
                   "score": ""
+                },
+                {
+                  "id": "e0a1bf26-14cd-4eae-bb1c-1d291d5438c2",
+                  "title": "Information disclosure – Improper LDAP data protection",
+                  "status": "Open",
+                  "severity": "TBD",
+                  "type": "Information disclosure",
+                  "description": "Improper data protection of LDAP can allow an attacker to read information not intended for disclosure. Review authorization settings.\n",
+                  "mitigation": "",
+                  "modelType": "STRIDE",
+                  "new": false,
+                  "number": 11,
+                  "score": ""
                 }
               ],
               "threatFrequency": {
                 "tampering": 1,
-                "informationDisclosure": 0,
+                "informationDisclosure": 1,
                 "denialOfService": 0
               }
             },
@@ -1116,6 +1122,22 @@
             "target": {
               "cell": "13b44b97-4ad4-498e-bb58-21eb65bc73c2",
               "port": "62a9185f-8c86-47b2-bed0-207934dfd7f4"
+            },
+            "vertices": [
+              {
+                "x": 830,
+                "y": 660
+              }
+            ],
+            "tools": {
+              "items": [
+                "boundary",
+                "button-remove",
+                "vertices",
+                "source-arrowhead",
+                "target-arrowhead"
+              ],
+              "name": null
             }
           },
           {
@@ -1413,6 +1435,6 @@
     ],
     "diagramTop": 1,
     "reviewer": "Ms. Kat",
-    "threatTop": 10
+    "threatTop": 11
   }
 }
